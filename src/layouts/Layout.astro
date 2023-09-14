@@ -1,35 +1,73 @@
 ---
+import MenuComponent from '../components/Menu/MenuComponent.vue';
+import { SEO } from "astro-seo";
+import avatar from '../assets/butyok_avatar.webp';
+
 export interface Props {
 	title: string;
+	seoTitle: string;
+	seoDescription: string;
 }
 
-const { title } = Astro.props;
+const {title, seoTitle, seoDescription} = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang='hu' class='bg:gray-3 font-family:Roboto' style="display: none;">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
+		<SEO :title={seoTitle}
+		:description={seoDescription}
+		twitter={{
+			card: 'summary',
+			creator: '@butyokkapitany3',
+			site: '@butyokkapitany3',
+			title: seoTitle,
+			image: avatar,
+			imageAlt: 'Bütyök Kapitány avatarja',
+			description: seoDescription
+		}}
+		openGraph={{
+			basic: {
+				title: seoTitle,
+				type: 'website',
+				image: avatar,
+			},
+			optional: {
+				description: seoDescription
+			}
+		}}
+		charset='UTF-8'
+		>
+		</SEO>
+		<meta charset='UTF-8' />
+		<meta name='viewport' content='width=device-width' />
+		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+		<script>
+			import '@master/css';
+			import '@master/normal.css';
+			import { initRuntime } from "@master/css";
+            import config from "../../master.css";
+ 
+            initRuntime(config);
+		</script>
+		<meta name='generator' content={Astro.generator} />
 		<title>{title}</title>
 	</head>
+	<nav>
+		<MenuComponent client:idle></MenuComponent>
+	</nav>
 	<body>
 		<slot />
 	</body>
 </html>
 <style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
+@font-face {
+	font-family: Roboto;
+	src: url('/fonts/RobotoCondensed-Regular.ttf');
+}
+@font-face {
+	font-family: Roboto;
+	src: url('/fonts/RobotoCondensed-Bold.ttf');
+	font-weight: bold;
+}
 </style>

@@ -1,0 +1,32 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ContentContainer from "../components/Containers/ContentContainer.vue";
+import PlaylistComp from "../components/Zene/PlaylistComp.vue";
+import LeftContentPanel from "../components/Panels/LeftContentPanel.vue";
+---
+
+<Layout
+  title="Zenegyűjtemény"
+  seoTitle="Zenegyűjtemény - Bütyök Gaming"
+  seoDescription="Bütyök Kapitány DMCA/Copyright mentes zenegyűjteménye videós projektekhez"
+>
+  <main>
+    <ContentContainer>
+      <LeftContentPanel
+        class="color:white font:1.3rem {color:red;text:underline}_a"
+      >
+        <p>Ezen az oldalon találjátok az eddigi zenés projekteimet</p>
+        <p>
+          Az itt található zenék mindegyikére a <a
+            href="https://creativecommons.org/licenses/by-sa/4.0/"
+            target="_blank"
+            rel="noopener noreferrer">CC BY-SA 4.0</a
+          > licensz vonatkozik, amely röviden: szabadon használhatod őket Youtube
+          videókhoz vagy élő közvetítésekhez, Remixeket is készíthetsz belőlük, de
+          a leírásban benne kell lennie a felhaznált zene adatainak.
+        </p>
+      </LeftContentPanel>
+      <PlaylistComp />
+    </ContentContainer>
+  </main>
+</Layout>

@@ -1,0 +1,58 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ContentContainer from "../components/Containers/ContentContainer.vue";
+import CyberButton from "../components/CyberButton.vue";
+import avatar from '../assets/butyok_avatar.webp';
+import {siGit, siMastodon, siYoutube, siFacebook, siTwitch, siInstagram, siTwitter, siTiktok} from 'simple-icons'
+---
+
+<Layout
+  title="Bütyök Kapitány Linkgyűjtemény"
+  seoTitle="Linkgyűjtemény - Bütyök Gaming"
+  seoDescription="Linkgyűjtemény Bütyök Kapitány social média platformjaihoz"
+>
+  <main>
+    <ContentContainer>
+      <div
+        class="bg:gray-10 mt:16 border:5px|solid|red-52 border-radius:20px gap:50px align-items:center box-shadow:0px|0px|2px|2px|red-50 flex flex-wrap:wrap justify-content:space-evenly"
+      >
+        <div class="max-width:600px color:gray-90 text:center font-size:1.5rem p:16">
+          <img src={avatar} alt="Bütyök avatar" class="width:200px m:10|auto box-shadow:2px|2px|2px|black">
+          <h2>Bütyök Kapitány</h2>
+          <p>
+            25 éves streamer és Youtuber. Célom, hogy az élő
+            közvetítések és videós tartalmak segítségével lehetőséget adjak az
+            embereknek a minőségi és interaktív online szórakozásra. A
+            közvetítések során együtt élhetjük át a játékok izgalmas
+            pillanatait, szórakozhatunk a vicces helyzeteken, és közösen
+            átbeszélhetünk különböző témákat, nem csak a videójátékok terén.
+            Ezek a közvetlen és spontán pillanatok lehetővé teszik, hogy a
+            nézők is aktívak legyenek a közvetítések során és ők is részesei
+            legyenek a közösségnek.
+          </p>
+          <p>
+            Örömmel osztom meg másokkal a videójátékok iránti rajongásomat,
+              illetve az évek alatt összegyűjtött tapasztalataimat. Ha kérdésed
+              van, vagy esetleg együttműködési kérésed merülne fel, ne habozz
+              felvenni velem a kapcsolatot. Köszönöm, hogy ellátogattál az
+              oldalamra, és alig várom, hogy találkozzunk a következő élő adás
+              során!
+          </p>
+        </div>
+        <div class="flex flex-direction:column gap:16 p:16">
+          <!-- https://codepen.io/jh3y/pen/PoGbxLp -->
+          <CyberButton webIcon={siTwitch} href="https://www.twitch.tv/butyokkapitany">Twitch</CyberButton>
+          <CyberButton webIcon={siYoutube} href="https://www.youtube.com/@ButyokKapitany">Youtube</CyberButton>
+          <CyberButton webIcon={siFacebook} href="https://www.facebook.com/butyokgaming">Facebook</CyberButton>
+          <CyberButton webIcon={siTwitter} href="https://twitter.com/butyokkapitany3">Twitter</CyberButton>
+          <CyberButton webIcon={siTiktok} href="https://www.tiktok.com/@butyokkapitany">TikTok</CyberButton>
+          <CyberButton webIcon={siInstagram} href="https://www.instagram.com/butyokkapitany03/">Instagram</CyberButton>
+          <CyberButton webIcon={siMastodon} href="https://tech.lgbt/@butyokkapitany">Mastodon</CyberButton>
+          <CyberButton webIcon={siGit} href="https://github.com/butyokkapitany">Github</CyberButton>
+        </div>
+      </div>
+    </ContentContainer>
+  </main>
+</Layout>
+
+<style scoped></style>

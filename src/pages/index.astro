@@ -1,81 +1,132 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import HeaderComponent from "../components/HeaderComponent.vue";
+import ContentContainer from "../components/Containers/ContentContainer.vue";
+import RightContentPanel from "../components/Panels/RightContentPanel.vue";
+import LeftContentPanel from "../components/Panels/LeftContentPanel.vue";
+import ImageContainer from "../components/Containers/ImageContainer.vue";
+import SocialStatPanel from "../components/Panels/SocialStatPanel.vue";
+import SkillPillComponent from "../components/SkillPillComponent.vue";
+import avatar from "../assets/butyok_avatar.webp";
+import pcimg from '../assets/pcimg.webp';
+
+import { simpleIconToHex } from "../helpers";
+
+import { siTwitch } from "simple-icons";
+import { siTiktok } from "simple-icons";
+import { siYoutube } from "simple-icons";
+import { siInstagram } from "simple-icons";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+<Layout
+  title="Bütyök Kapitány Weboldala"
+  seoTitle="Bütyök Gaming - Bütyök Kapitány Weboldala"
+  seoDescription="Streamer/Youtuber, internetes tartalomgyártó"
+>
+  <main>
+    <HeaderComponent />
+    <ContentContainer>
+      <LeftContentPanel>
+        <div
+          class="flex flex-wrap:wrap@<md align-items:center justify-content:center color:gray-74_p color:gray-90"
+        >
+          <div class="font:1.3rem>p py:20px>p">
+            <h3 class="font:3rem text:center">Üdvözöllek az oldalamon!</h3>
+            <p>
+              Bütyök Kapitány vagyok, 25 éves streamer és Youtuber. Több éves
+              tapasztalattal rendelkező tartalomgyártóként a célom, hogy az élő
+              közvetítések és videós tartalmak segítségével lehetőséget adjak az
+              embereknek a minőségi és interaktív online szórakozásra. A
+              közvetítések során együtt élhetjük át a játékok izgalmas
+              pillanatait, szórakozhatunk a vicces helyzeteken, és közösen
+              átbeszélhetünk különböző témákat, nem csak a videójátékok terén.
+              Ezek a közvetlen és spontán pillanatok lehetővé teszik, hogy a
+              nézők is aktívak legyenek a közvetítések során és ők is részesei
+              legyenek a közösségnek.
+            </p>
+            <p>
+              Örömmel osztom meg másokkal a videójátékok iránti rajongásomat,
+              illetve az évek alatt összegyűjtött tapasztalataimat. Ha kérdésed
+              van, vagy esetleg együttműködési kérésed merülne fel, ne habozz
+              felvenni velem a kapcsolatot. Köszönöm, hogy ellátogattál az
+              oldalamra, és alig várom, hogy találkozzunk a következő élő adás
+              során!
+            </p>
+          </div>
+          <ImageContainer src={avatar} />
+        </div>
+      </LeftContentPanel>
+      <div
+        class="flex gap:24 flex-wrap:wrap justify-content:space-around justify-items:center"
+      >
+        <SocialStatPanel
+          website="https://www.twitch.tv/butyokkapitany"
+          socialCount="712"
+          icon={siTwitch}
+          socialSiteName="Twitch"
+          color={simpleIconToHex(siTwitch.hex)}
+        />
+        <SocialStatPanel
+          website="https://www.tiktok.com/@butyokkapitany"
+          socialCount="640"
+          icon={siTiktok}
+          socialSiteName="TikTok"
+          color="#ff0050"
+        />
+        <SocialStatPanel
+          website="https://www.youtube.com/@ButyokKapitany"
+          socialCount="740"
+          icon={siYoutube}
+          socialSiteName="Youtube"
+          color={simpleIconToHex(siYoutube.hex)}
+        />
+        <SocialStatPanel
+          website="https://www.instagram.com/butyokkapitany03/"
+          socialCount="154"
+          icon={siInstagram}
+          socialSiteName="Instagram"
+          color={simpleIconToHex(siInstagram.hex)}
+        />
+      </div>
+      <RightContentPanel>
+        <div class="flex@md align-items:center color:gray-74_p color:gray-90">
+          <ImageContainer src={pcimg} />
+          <div class="font:1.3rem>p {color:red;text:underline}_a">
+            <p>
+              Az online tartalomgyártás mellett párhuzamosan foglalkozom
+              weboldalak, illetve webes alkalmazások készítésével. A design
+              filozófiám a felhasználói élmény maximalizálása és a modern
+              esztétika ötvözése. Minden egyes projektemnél törekszem a
+              reszponzivitásra, a mai webes igények kielégítésére illetve a
+              felhasználóbarát tervezésre. Legyen szó egy minimalista
+              portfólióról, vagy egy komplex webes alkalmazásról, minden
+              projektemnél az elsődleges szempont a megrendelő igényei illetve a
+              végtermék hosszútávú használhatósága és támogatása.
+              <p>
+                Az eddigi projekteimet a <a
+                  href="/projektek"
+                  rel="noopener noreferrer">Projektek</a
+                > oldalon találjátok.
+              </p>
+            </p>
+            <div class="flex flex-wrap:wrap gap:8 m:16 justify-content:center">
+              <SkillPillComponent>Javascript</SkillPillComponent>
+              <SkillPillComponent>Typescript</SkillPillComponent>
+              <SkillPillComponent>Node.js</SkillPillComponent>
+              <SkillPillComponent>Vue</SkillPillComponent>
+              <SkillPillComponent>Nuxt</SkillPillComponent>
+              <SkillPillComponent>Astro</SkillPillComponent>
+              <SkillPillComponent>Electron</SkillPillComponent>
+              <SkillPillComponent>Tauri</SkillPillComponent>
+              <SkillPillComponent>Master.css</SkillPillComponent>
+              <SkillPillComponent>Wordpress</SkillPillComponent>
+              <SkillPillComponent>Drupal</SkillPillComponent>
+            </div>
+          </div>
+        </div>
+      </RightContentPanel>
+    </ContentContainer>
+  </main>
 </Layout>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
+<style scoped></style>

@@ -1,0 +1,90 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ContentContainer from "../components/Containers/ContentContainer.vue";
+import LeftContentPanel from "../components/Panels/LeftContentPanel.vue";
+import ProjectComponent from "../components/Projektek/ProjectComponent.vue";
+import tarkovacs from "../assets/projektek/tarkovacs.webp";
+import tarkovacsblog from "../assets/projektek/tarkovacs_blog.webp";
+import valorant from "../assets/projektek/valorant_strat.webp";
+import chat from "../assets/projektek/chat_overlay.webp";
+import butyokgaming from "../assets/projektek/butyok_gaming.webp";
+import mgkiosk from "../assets/projektek/mg_kiosk.webp";
+import pecsbanya from '../assets/projektek/pecsbanya_projekt.webp';
+---
+
+<Layout
+  title="Projektek"
+  seoTitle="Projektek - Bütyök Gaming"
+  seoDescription="Bütyök Kapitány projektgyűjteménye"
+>
+  <main>
+    <ContentContainer>
+      <LeftContentPanel
+        class="color:gray-94 text:1.3rem {color:red;text:underline}_a"
+      >
+        <p>
+          Ezen az oldalon találjátok az eddig projekteimet illetve munkáimat.
+        </p>
+      </LeftContentPanel>
+      <div
+        class="flex justify-content:center flex-wrap:wrap align-items:auto gap:10px"
+      >
+        <ProjectComponent
+          imageSrc={butyokgaming}
+          title="Butyokgaming Weboldal"
+          usedTechs={["Vue", "Astro", "Master.css"]}
+        >
+          A saját weboldalam, ahol minden információ elérhető az eddigi illetve
+          jövőbeli munkáimról
+        </ProjectComponent>
+        <ProjectComponent
+        imageSrc={pecsbanya}
+          title="Pécsbánya Közösségi Ház Weboldal"
+          usedTechs={["Wordpress"]}
+        >
+          Régi weboldal felújítása a pécsbányai Közösségi Ház számára
+        </ProjectComponent>
+        <ProjectComponent
+          imageSrc={tarkovacs}
+          title="Tarkovács Ügyvédi Iroda Weboldal"
+          usedTechs={["Wordpress"]}
+        >
+          Egyedi weboldal a Tarkovács Ügyvédi Iroda számára
+        </ProjectComponent>
+        <ProjectComponent
+          imageSrc={tarkovacsblog}
+          title="Tarkovács Ügyvédi Iroda Blog"
+          usedTechs={["Wordpress"]}
+        >
+          A Tarkovács Ügyvédi Iroda Blog-ja
+        </ProjectComponent>
+        <ProjectComponent
+          imageSrc={valorant}
+          title="Hunlorant Strat Roulette"
+          usedTechs={["Vue"]}
+        >
+          Magyar nyelvű strat roulette oldal a Valorant játék számára
+        </ProjectComponent>
+        <ProjectComponent
+          imageSrc={mgkiosk}
+          title="Multigames TV Kiosk"
+          usedTechs={["Vue", "Tauri", "Node.js", "Master.css", "socket.io"]}
+        >
+          Egyedileg fejlesztett Kiosk szoftver a <a
+            href="https://multigames.hu"
+            target="_blank"
+            rel="noopener noreferrer">Multigames Esport Center</a
+          > számára
+        </ProjectComponent>
+        <ProjectComponent
+          imageSrc={chat}
+          title="Twitch Chatbox"
+          usedTechs={["Vue", "tmi.js", "Master.css"]}
+        >
+          Egyedi Twitch chatbox, amelyet akár OBS keresztül is lehet használi,
+          és plusz funkciókkal lett ellátva
+        </ProjectComponent>
+      </div>
+    </ContentContainer>
+  </main>
+</Layout>
