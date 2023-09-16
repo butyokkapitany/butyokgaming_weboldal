@@ -1,15 +1,16 @@
-import type { Config } from '@master/css'
+import type {Config} from '@master/css';
 
 export default {
-    classes: {},
-    colors: {},
-    themes: {},
-    rules: {},
-    values: {},
-    semantics: {},
-    viewports: {},
-    mediaQueries: {},
-    animations: {},
-    selectors: {},
-    functions: {}
-} as Config
+	classes: {
+		'link-style': '{color:red-60;text:underline}_a',
+	},
+	colors: {},
+	rules: {},
+	values: {},
+	semantics: {},
+	viewports: {},
+	mediaQueries: {},
+	animations: {},
+	selectors: {},
+	functions: {},
+} satisfies Config;

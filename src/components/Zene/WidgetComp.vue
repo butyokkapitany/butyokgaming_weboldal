@@ -1,6 +1,7 @@
 <template>
   <div class="d:flex gap:20">
     <a
+      aria-label="Youtube link gomb"
       :href="props.ytLink"
       target="_blank"
     >
@@ -10,6 +11,7 @@
       />
     </a>
     <a
+      aria-label="Letöltés link gomb"
       :href="props.downloadLink"
       target="_blank"
     >

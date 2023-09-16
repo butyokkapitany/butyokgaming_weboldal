@@ -7,8 +7,9 @@
       <img
         class="width:100% height:auto"
         :src="props.imageSrc"
+        :alt="props.altTxt"
       >
-      <div class="text:center color:gray-96 p:16 font:1.3rem {color:red;text:underline}>a">
+      <div class="text:center color:gray-96 p:16 font:1.3rem link-style">
         <slot />
       </div>
       <div
@@ -31,6 +32,7 @@ import SkillPillComponent from '../SkillPillComponent.vue';
 
 const props = defineProps<{
   imageSrc: string,
+  altTxt: string,
   title: string,
   usedTechs?: string[];
 }>();

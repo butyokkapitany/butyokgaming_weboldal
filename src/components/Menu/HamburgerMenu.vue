@@ -1,6 +1,8 @@
 <template>
   <div class="display:flex justify-content:end">
     <button
+      aria-label="Menü Gomb"
+      tabindex="0"
       @click="showMenu()"
     >
       <PhList

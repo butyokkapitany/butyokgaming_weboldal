@@ -11,6 +11,6 @@
 <script lang="ts" setup>
 const props = defineProps<{
     src: string,
-    alt?: string
+    alt: string
 }>();
 </script>
