@@ -9,7 +9,7 @@
     <p class="font-weight:700 font-size:24 flex-basis:30%">
       {{ props.songTitle }}
     </p>
-    <p class="display:none@<sm color:gray-80 flex-basis:10%">
+    <p class="display:none@<sm color:gray-80 font-size:1.2rem flex-basis:10%">
       {{ props.albumName }}
     </p>
     <p class="display:none@<sm color:gray-80 flex-basis:10%">

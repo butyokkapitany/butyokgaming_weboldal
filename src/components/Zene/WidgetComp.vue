@@ -1,5 +1,5 @@
 <template>
-  <div class="d:flex gap:20">
+  <div class="d:flex gap:20 mr:1rem">
     <a
       aria-label="Youtube link gomb"
       :href="props.ytLink"
