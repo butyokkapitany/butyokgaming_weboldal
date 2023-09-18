@@ -24,9 +24,3 @@ const props = defineProps<{
   href: string;
 }>();
 </script>
-
-<style scoped>
-.cybr-btn {
-  font-family: "Cyber", sans-serif;
-}
-</style>
