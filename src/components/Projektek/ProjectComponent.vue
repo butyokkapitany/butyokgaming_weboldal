@@ -6,7 +6,7 @@
       </h2>
       <img
         class="width:100% height:auto"
-        :src="props.imageSrc"
+        :src="props.imageSrc.src"
         :alt="props.altTxt"
       >
       <div class="text:center color:gray-96 p:16 font:1.3rem link-style">
@@ -28,10 +28,11 @@
 </template>
 
 <script lang="ts" setup>
+import type {ImageMetadata} from 'astro';
 import SkillPillComponent from '../SkillPillComponent.vue';
 
 const props = defineProps<{
-  imageSrc: string,
+  imageSrc: ImageMetadata,
   altTxt: string,
   title: string,
   usedTechs?: string[];

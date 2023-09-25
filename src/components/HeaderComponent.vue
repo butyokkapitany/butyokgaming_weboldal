@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="`background-image:url('${background}')`"
+    :class="`background-image:url('${background.src}')`"
     class="background-repeat:no-repeat background-position:bottom height:600px"
   >
     <div class="text:center position:absolute top:10% width:100%">

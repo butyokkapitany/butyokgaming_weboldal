@@ -4,7 +4,7 @@
     :class="`box-shadow:inset|0px|0px|20px|${props.pillColorName}-40:hover bg:${props.pillColorName}-8:hover`"
   >
     <div>
-      <CoverComp :img-src="props.imgSrc" />
+      <CoverComp :img-src="props.imgSrc.src" />
     </div>
     <p class="font-weight:700 font-size:24 flex-basis:30%">
       {{ props.songTitle }}
@@ -34,11 +34,12 @@
 import CoverComp from './CoverComp.vue';
 import GenrePillComp from './GenrePillComp.vue';
 import WidgetComp from './WidgetComp.vue';
+import type {ImageMetadata} from 'astro';
 
 const props = defineProps<{
   ytLink: string;
   dlLink: string;
-  imgSrc: string;
+  imgSrc: ImageMetadata;
   songTitle: string;
   albumName: string;
   albumYear: number;

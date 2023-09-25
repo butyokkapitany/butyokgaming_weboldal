@@ -1,10 +1,12 @@
+import type {ImageMetadata} from 'astro';
+
 export function simpleIconToHex(hexCode: string) {
 	return `#${hexCode}`;
 }
 
 export type Songinfo = {
 	id: number;
-	coverImg: string;
+	coverImg: ImageMetadata;
 	songTitle: string;
 	songAlbum: string;
 	songYear: number;
