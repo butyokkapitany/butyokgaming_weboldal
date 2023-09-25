@@ -10,4 +10,5 @@ export default defineConfig({
 			minify: 'terser',
 		},
 	},
+	site: 'https://butyokgaming.hu',
 });

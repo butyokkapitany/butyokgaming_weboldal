@@ -22,7 +22,7 @@ const {title, seoTitle, seoDescription} = Astro.props;
 			creator: '@butyokkapitany3',
 			site: '@butyokkapitany3',
 			title: seoTitle,
-			image: avatar,
+			image: avatar.src,
 			imageAlt: 'Bütyök Kapitány avatarja',
 			description: seoDescription
 		}}
@@ -30,7 +30,7 @@ const {title, seoTitle, seoDescription} = Astro.props;
 			basic: {
 				title: seoTitle,
 				type: 'website',
-				image: avatar,
+				image: avatar.src,
 			},
 			optional: {
 				description: seoDescription
