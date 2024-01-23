@@ -6,7 +6,7 @@
       target="_blank"
     >
       <div
-        class="w:32 h:32 fill:red-36"
+        class="w:32 h:32 fill:red-60"
         v-html="siYoutube.svg"
       />
     </a>

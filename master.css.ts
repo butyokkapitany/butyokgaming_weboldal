@@ -4,6 +4,11 @@ export default {
 	classes: {
 		'link-style': '{color:red-60;text:underline}_a',
 	},
+	styles: {
+		'link-style': {
+			'': '{color:red-60;text:underline}_a',
+		},
+	},
 	colors: {},
 	rules: {},
 	values: {},
@@ -13,4 +18,4 @@ export default {
 	animations: {},
 	selectors: {},
 	functions: {},
-} satisfies Config;
+} as Config;

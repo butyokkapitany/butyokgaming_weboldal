@@ -7,7 +7,7 @@
     >
       <button
         :class="`bg:${props.color}`"
-        class="text:uppercase text:center px:10px py:5px r:40px color:gray-94 font:bold"
+        class="text:uppercase text:center px:10px py:5px r:40px color:gray-10 font:bold"
       >
         {{ props.text }}
       </button>

@@ -12,7 +12,7 @@
     </button>
     <div
       :class="{'hidden': menuClosed}"
-      class="width:250 bg:gray-10/.95 transition:all|300ms|ease position:absolute top:40px z-index:100 text:center"
+      class="width:250 bg:gray-95/.95 transition:all|300ms|ease position:absolute top:40px z-index:100 text:center"
     >
       <MenuItemsList />
     </div>

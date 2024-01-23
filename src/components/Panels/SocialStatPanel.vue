@@ -1,7 +1,7 @@
 <template>
   <div
-    :class="`box-shadow:0|0|20px|${props.color}:hover`"
-    class="bg:gray-4 border-radius:40px min-width:250px transform:scale(1.02):hover transition:all|200ms|ease"
+    :class="`box-shadow:0|0|20px|${props.color}:hover, border:1px|solid|${props.color}`"
+    class="bg:gray-90 border-radius:40px min-width:250px transform:scale(1.02):hover transition:all|200ms|ease"
   >
     <h3
       :class="`color:${props.color}`"
@@ -14,10 +14,10 @@
       class="width:100px height:100px margin:0|auto"
       v-html="icon.svg"
     />
-    <p class="color:gray-80 text:center pt:24 font-size:40 font:bold">
+    <p class="color:gray-20 text:center pt:24 font-size:40 font:bold">
       {{ props.socialCount }}
     </p>
-    <p class="color:red-52 text:center font:bold font:32">
+    <p class="color:red-60 text:center font:bold font:32">
       Követő
     </p>
     <ButtonComponent

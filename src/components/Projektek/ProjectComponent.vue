@@ -1,7 +1,7 @@
 <template>
   <div class="width:300px height:auto bg:gray-4 p:16 r:40px">
-    <div class="bg:gray-2/.1 shadow:0px|0px|5px|red-52/.5 p:16 r:40px height:100%">
-      <h2 class="color:gray-96 text:center mb:32">
+    <div class="bg:gray-10/.1 shadow:0px|0px|5px|red-50/.5 p:16 r:40px height:100%">
+      <h2 class="color:gray-10 text:center mb:32">
         {{ props.title }}
       </h2>
       <img
@@ -9,7 +9,7 @@
         :src="props.imageSrc.src"
         :alt="props.altTxt"
       >
-      <div class="text:center color:gray-96 p:16 font:1.3rem link-style">
+      <div class="text:center color:gray-20 p:16 font:1.3rem link-style">
         <slot />
       </div>
       <div

@@ -1,7 +1,7 @@
 <template>
   <div
-    class="d:flex align-items:center gap:14 p:4|4 color:white bg:gray-10:odd transition:all|200ms|ease-out flex-wrap:wrap@<2xs"
-    :class="`box-shadow:inset|0px|0px|20px|${props.pillColorName}-40:hover bg:${props.pillColorName}-8:hover`"
+    class="d:flex align-items:center gap:14 p:4|4 color:white bg:gray-90:odd transition:all|200ms|ease-out flex-wrap:wrap@<2xs"
+    :class="`box-shadow:inset|0px|0px|20px|${props.pillColorName}-20:hover bg:${props.pillColorName}-90:hover`"
   >
     <div>
       <CoverComp :img-src="props.imgSrc.src" />
@@ -9,10 +9,10 @@
     <p class="font-weight:700 font-size:24 flex-basis:30%">
       {{ props.songTitle }}
     </p>
-    <p class="display:none@<sm color:gray-80 font-size:1.2rem flex-basis:10%">
+    <p class="display:none@<sm color:gray-20 font-size:1.2rem flex-basis:10%">
       {{ props.albumName }}
     </p>
-    <p class="display:none@<sm color:gray-80 flex-basis:10%">
+    <p class="display:none@<sm color:gray-20 flex-basis:10%">
       {{ props.albumYear }}
     </p>
     <div class="flex-basis:50%">

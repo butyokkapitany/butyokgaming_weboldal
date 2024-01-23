@@ -5,7 +5,7 @@
   >
     <label
       class="border-radius:20 p:0|10"
-      :class="`border:2px|solid|${props.colorName}-44 `"
+      :class="`border:2px|solid|${props.colorName}-70 `"
     >{{ props.genre }}</label>
   </div>
 </template>

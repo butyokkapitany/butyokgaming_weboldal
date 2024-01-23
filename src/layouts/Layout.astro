@@ -13,7 +13,7 @@ const {title, seoTitle, seoDescription} = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang='hu' class='bg:gray-3 font-family:Roboto' style="display: none;">
+<html lang='hu' class='bg:gray-95 font-family:Roboto' style="display: none;">
 	<head>
 		<SEO :title={seoTitle}
 		:description={seoDescription}
@@ -43,12 +43,11 @@ const {title, seoTitle, seoDescription} = Astro.props;
 		<meta name='viewport' content='width=device-width' />
 		<link rel='icon' type='image/svg+xml' href='/favicon.svg' />
 		<script>
-			import '@master/css';
 			import '@master/normal.css';
-			import { initRuntime } from "@master/css";
-            import config from "../../master.css";
+			import { initCSSRuntime } from "@master/css-runtime";
+            import config from '../../master.css';
  
-            initRuntime(config);
+            initCSSRuntime(config);
 		</script>
 		<meta name='generator' content={Astro.generator} />
 		<title>{title}</title>
