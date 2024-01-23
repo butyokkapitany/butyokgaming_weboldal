@@ -9,8 +9,11 @@ dependencies:
     specifier: ^3.0.0
     version: 3.0.0(@babel/core@7.23.0)(astro@3.1.4)(vite@4.4.9)(vue@3.3.4)
   '@master/css':
-    specifier: 2.0.0-beta.173
-    version: 2.0.0-beta.173
+    specifier: 2.0.0-rc.8
+    version: 2.0.0-rc.8
+  '@master/css-runtime':
+    specifier: 2.0.0-rc.8
+    version: 2.0.0-rc.8
   '@master/normal.css':
     specifier: 2.0.0-beta.84
     version: 2.0.0-beta.84
@@ -932,22 +935,28 @@ packages:
       '@jridgewell/resolve-uri': 3.1.1
       '@jridgewell/sourcemap-codec': 1.4.15
 
-  /@master/css@2.0.0-beta.173:
-    resolution: {integrity: sha512-Wbsmzk7B2YmFnlTlkVa6WlHZk+mOKc4fzEfUQjTMcopj5M5Y08SSmGSpbHE2J1wXzE+cxl9HCSmg4aNWrNZ9ew==}
-    hasBin: true
+  /@master/css-runtime@2.0.0-rc.8:
+    resolution: {integrity: sha512-/mVg5UskTHPyZDHOYvmBcZaXboFSDG778D3mxImJMJMV7VKgWyCObokGIodRxjb7oorRzFzsKIupZmH1NRfHsg==}
     dependencies:
-      '@master/normal.css': 2.0.0-beta.173
-      '@techor/fs': 2.5.17
-      '@techor/log': 2.5.17
-      commander: 11.0.0
+      '@master/css': 2.0.0-rc.8
     dev: false
 
-  /@master/normal.css@2.0.0-beta.173:
-    resolution: {integrity: sha512-65rw3u1oILFdx6TfkOeOB8gfxroJ9BXkvIJyqcLOYEYFN52GLwC137LSFZ+54URHu7bH5vSfBQ8dAFy5O+sV5Q==}
+  /@master/css@2.0.0-rc.8:
+    resolution: {integrity: sha512-+HOSXWcKZUTxfJPg9vDyBAEHytcpocaCrZ7mhW0cY02nuJ2zdJexTl0Tc3oW2MOopyK73Nn4+sbr360J+vY++A==}
+    hasBin: true
+    dependencies:
+      '@master/normal.css': 2.0.0-rc.8
+      '@techor/fs': 2.5.24
+      '@techor/log': 2.5.24
+      commander: 11.1.0
     dev: false
 
   /@master/normal.css@2.0.0-beta.84:
     resolution: {integrity: sha512-m6QO9BSmY+Wu3FGbexdiOYrMwRDavUTkfqHVP1pttTm9Y9ojVIFu1dxhYh/gEtgKDRWX7Kub4Cb+XDzA2Dn+0Q==}
+    dev: false
+
+  /@master/normal.css@2.0.0-rc.8:
+    resolution: {integrity: sha512-R+9nF81Mkv2ZRyxQVGxloDjYvlEJGMLhGdYsr0U7ZVVtAZw3P02jE+UDLJSUE3rp6j5ymfQFQ0pX4CIe3bo6pw==}
     dev: false
 
   /@nodelib/fs.scandir@2.1.5:
@@ -989,12 +998,12 @@ packages:
       tslib: 2.6.2
     dev: true
 
-  /@techor/fs@2.5.17:
-    resolution: {integrity: sha512-L/MNTvooqyaFlHtlRl9YUkzTjrHmVvhWH1MEFLfzVmdpY5OsxL57Ok3dkng4eQBmAhwOlWydXWf3lC5yGYN2hQ==}
+  /@techor/fs@2.5.24:
+    resolution: {integrity: sha512-+1gfI1ILuzGZkVxDqQzh0dCSswSLnjIStzo2zyfw+W2kWsqtllpfeN30/g+THO09CVmyW4xQLfED+p41pENpHg==}
     dev: false
 
-  /@techor/log@2.5.17:
-    resolution: {integrity: sha512-/+PSy0C9SRSDcYpO94Y8sZWTDWY5bDFMRZf+nA2YXo/A6bi0vH2IAUSlOWvOfUDs6yhaPXyz3aMKXgfGf/HO5w==}
+  /@techor/log@2.5.24:
+    resolution: {integrity: sha512-UGpFeB0ndOZaOj+6MEompqZZAB5WtjDoRx5G25QuFz4XDDAVsG5XtJz6lBqajvsJQ47DT2A7wyPqDPSl3DNzbw==}
     dev: false
 
   /@types/babel__core@7.20.2:
@@ -1842,8 +1851,8 @@ packages:
     resolution: {integrity: sha512-Fu4hJdvzeylCfQPp9SGWidpzrMs7tTrlu6Vb8XGaRGck8QSNZJJp538Wrb60Lax4fPwR64ViY468OIUTbRlGZg==}
     dev: false
 
-  /commander@11.0.0:
-    resolution: {integrity: sha512-9HMlXtt/BNoYr8ooyjjNRdIilOTkVJXB+GhxMTtOKwk0R4j4lS4NpjuqmRxroBfnfTSHQIHQB7wryHhXarNjmQ==}
+  /commander@11.1.0:
+    resolution: {integrity: sha512-yPVavfyCcRhmorC7rWlkHn15b4wDVgVmBA7kV4QVBsF7kv/9TKJAbAXVTxvTnwP8HHKjRCJDClKbciiYS7p0DQ==}
     engines: {node: '>=16'}
     dev: false
 
