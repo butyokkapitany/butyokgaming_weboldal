@@ -1,9 +1,6 @@
 import type {Config} from '@master/css';
 
 export default {
-	classes: {
-		'link-style': '{color:red-60;text:underline}_a',
-	},
 	styles: {
 		'link-style': {
 			'': '{color:red-60;text:underline}_a',
